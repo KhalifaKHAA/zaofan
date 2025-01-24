@@ -1543,8 +1543,8 @@ global.dfail = (type, m, conn) => {
     private: '*[ ℹ️ ] يستخدم في البوت خاص.*',
     admin: '*[ ℹ️ ] للمشرفين فقط.*',
     botAdmin: '*[ ℹ️ ] يجب رفع البوت مشرف.*',
-    unreg: '*[ ℹ️ ] لاستخدام الامر يجب تسجيل نفسك:* _#verify name.age_ *to register.*',
-    restrict: '*[ ℹ️ ] This command was disabled by the bot owner.*',
+    unreg: '*[ ℹ️ ] لاستخدام الامر يجب تسجيل نفسك:*  .تسجيل.اسمك.عمرك*',
+    restrict: '*[ ℹ️ ] هذا الامر ممنوع من المالك.*',
   }[type];
   const aa = {quoted: m, userJid: conn.user.jid};
   const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: msg, contextInfo: {externalAdReply: {title: '*[ ⚠ ] Warning*', body: '𝒁𝒂𝒐𝒇𝒂𝒏 🐦‍🔥', thumbnail: imagen1, sourceUrl: 'https://instagram.com/khalifaalialtahery'}}}}, aa);
