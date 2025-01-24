@@ -107,7 +107,7 @@ loadChatgptDB();
 
 /* ------------------------------------------------*/
 
-global.authFile = `bobizasession`;
+global.authFile = `zaofansession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
@@ -207,7 +207,7 @@ return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.star
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./bobizasession/${files}`)
+unlinkSync(`./zaofansession/${files}`)
 })
 } 
 
@@ -232,7 +232,7 @@ console.log(chalk.bold.red(`[😔] Something went wrong during deletion, files n
 }}
 
 function purgeOldFiles() {
-const directories = ['./bobizasession/', './jadibts/']
+const directories = ['./zaofansession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -329,14 +329,14 @@ global.reloadHandler = async function(restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate);
   }
 
-  conn.welcome = '👋 ¡Welcome/to!\n@user';
-  conn.bye = '👋 ¡See you later!\n@user';
-  conn.spromote = '*[ ℹ️ ] @user He was promoted to administrator.*';
-  conn.sdemote = '*[ ℹ️ ] @user He was demoted from administrator.*';
-  conn.sDesc = '*[ ℹ️ ] The group description has been modified.*';
-  conn.sSubject = '*[ ℹ️ ] The group name has been changed.*';
-  conn.sIcon = '*[ ℹ️ ] The group profile photo has been changed.*';
-  conn.sRevoke = '*[ ℹ️ ] The group invite link has been reset.*';
+  conn.welcome = '👋 مرحبا بك/to!\n@user';
+  conn.bye = '👋 اراك لاحقا!\n@user';
+  conn.spromote = '*[ ℹ️ ] @user لقد اصبح شرشفا.*';
+  conn.sdemote = '*[ ℹ️ ] @user لقد اصبح كحيان.*';
+  conn.sDesc = '*[ ℹ️ ] تم تغير وصف المجموعه.*';
+  conn.sSubject = '*[ ℹ️ ] تم تغير اسم المجموعه.*';
+  conn.sIcon = '*[ ℹ️ ] تم تغير صورة المجموعه.*';
+  conn.sRevoke = '*[ ℹ️ ] تم اعادة تعين رابط المجموعه.*';
 
   conn.handler = handler.handler.bind(global.conn);
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
@@ -490,7 +490,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = `BOBIZA BOT [ ⏳ ] Uptime: ${uptime}`;
+  const bio = `𝒁𝒂𝒐𝒇𝒂𝒏 🐦‍🔥 BOT [ ⏳ ] Uptime: ${uptime}`;
   await conn.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
