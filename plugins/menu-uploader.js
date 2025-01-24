@@ -16,7 +16,7 @@ const defaultMenu = {
   header: '╭─────≼ %category ≽',
   body: '╎≡ %cmd',
   footer: '╰┄┄┄┄┄┄┄┄┄┄┄┄┄〢',
-  after: 'BOBIZA 👑',
+  after: '𝒁𝒂𝒐𝒇𝒂𝒏 🐦‍🔥',
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
@@ -180,7 +180,7 @@ let tags = {
 	title: 'قسم خاص  برفع الملفات ',
 	body: 'اليك الاوامر الخاصة بهذا القسم',
 	thumbnailUrl: 'https://telegra.ph/file/22455a32e324068fa1922.jpg',
-	sourceUrl: 'instagram.com/noureddine_ouafy',
+	sourceUrl: 'instagram.com/khalifaalialtahery',
 	mediaType: 1,
 	renderLargerThumbnail: true
 	}}})
@@ -191,7 +191,7 @@ let tags = {
 }
 handler.help = ['menu-uploader']
 handler.tags = ['categorie']
-handler.command = /menu-uploader$/i
+handler.command = /menu-uploader|اوامر-تحميل$/i
 export default handler
 //----------- FUNCTION -------
 function pickRandom(list) {
